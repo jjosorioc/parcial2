@@ -11,16 +11,43 @@ import {
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
+const backUrl = "http://localhost:3000/login";
 function Login() {
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
+        const emailInput = document.getElementById('emailLogin');
+        const passwordInput = document.getElementById('passwordLogin');
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        const response = await fetch(backUrl, {
+            mode: 'cors',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            // localStorage.setItem('token', data.token);
+            // localStorage.setItem('user', JSON.stringify(data.user));
+            window.location.href = "/home";
+
+        } else {
+            console.log(`Error: ${response.status} - ${response.statusText}`);
+        }
 
     }
 
     return (
         <div className='d-flex w-100 ms-auto' style={{ height: '100vh', border: "2px solid grey", borderRadius: "200px", overflow: "hidden" }}>
 
-   
+
 
             {/* Izquierda */}
             <div className='w-50 d-flex justify-content-center align-items-center' style={{ position: 'relative', backgroundColor: 'grey' }}>
