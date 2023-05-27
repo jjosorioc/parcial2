@@ -1,14 +1,15 @@
 {
-    "Welcome!": "Welcome!",
     "Your email": "Your email",
     "Your password": "Your password",
     "Remember me": "Remember me",
-    "Forgot password?": "Forgot password?",
-    "Not a member?": "Not a member?",
-    "Register": "Register",
     "Sign in": "Sign in",
-    "Your name": "Your name",
-    "Your cell phone": "Your cell phone",
-    "Join Us!": "Join Us!",
-    "Create account": "Create account"
+    "Your Ally Bookstore": "Your Ally Bookstore",
+    "Find": "Find even the book you weren't looking for",
+    "Author": "Author",
+    "Publisher": "Publisher",
+    "Genre": "Genre",
+    "Year": "Year",
+    "Available Online": "Available Online",
+    "Price": "Price",
+    "Summary": "Summary"
 }

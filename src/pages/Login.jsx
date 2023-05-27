@@ -1,6 +1,5 @@
 import books from '../assets/books.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
 import {
 
     MDBBtn,
@@ -8,7 +7,7 @@ import {
 }
     from 'mdb-react-ui-kit';
 
-import { Link } from 'react-router-dom';
+
 import { FormattedMessage } from 'react-intl';
 
 const backUrl = "http://localhost:3000/login";
@@ -54,7 +53,7 @@ function Login() {
                 <img src={books} alt="books" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, backgroundColor: 'rgba(255, 255, 255, 0.5)' }} />
                 <div className='d-flex flex-column align-items-center' style={{ position: 'absolute', bottom: 0 }}>
-                    <h1 className='text-center' style={{ color: "black", margin: "0 auto" }}>Encuentra hasta el libro que no estabas buscando</h1>
+                    <h1 className='text-center' style={{ color: "black", margin: "0 auto" }}><FormattedMessage id="Find" /></h1>
                 </div>
             </div>
 
@@ -62,10 +61,10 @@ function Login() {
             {/* Derecha */}
             <div className='w-50 bg-yellow d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "white", width: "70vw" }}>
                 <div className="text-center mb-3">
-                    <h2>Tu libreria Aliada</h2>
+                    <h2><FormattedMessage id='Your Ally Bookstore' /></h2>
                 </div>
-                <MDBInput wrapperClass='mb-4' label="Su correo" id='emailLogin' type='email' labelClass='white-text' />
-                <MDBInput wrapperClass='mb-4' label="Su contraseña" id='passwordLogin' type='password' labelClass='white-text' />
+                <MDBInput wrapperClass='mb-4' label={<FormattedMessage id='Your email' />} id='emailLogin' type='email' labelClass='white-text' />
+                <MDBInput wrapperClass='mb-4' label={<FormattedMessage id='Your password' />} id='passwordLogin' type='password' labelClass='white-text' />
                 <MDBBtn style={{ backgroundColor: "Grey", borderColor: "black" }} className="mb-4 w-50" onClick={handleLogin}><FormattedMessage id='Sign in' /></MDBBtn>
 
             </div>
@@ -77,3 +76,4 @@ function Login() {
 }
 
 export default Login;
+

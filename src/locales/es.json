@@ -1,14 +1,15 @@
 {
-    "Welcome!": "¡Bienvenid@!",
     "Your email": "Su correo",
     "Your password": "Su contraseña",
     "Remember me": "Recordar su cuenta",
-    "Forgot password?": "¿Se le olvidó la contraseña?",
-    "Not a member?": "¿No es un miembro?",
-    "Register": "Registrarse",
     "Sign in": "Entrar",
-    "Your name": "Su nombre",
-    "Your cell phone": "Su número telefónico",
-    "Join Us!": "¡Únete!",
-    "Create account": "Crea tu cuenta"
+    "Your Ally Bookstore": "Tu Librería Aliada",
+    "Find": "Encuentra hasta el libro que no estabas buscando",
+    "Author": "Autor",
+    "Publisher": "Editorial",
+    "Genre": "Género",
+    "Year": "Año",
+    "Available Online": "Disponible en línea",
+    "Price": "Precio",
+    "Summary": "Resumen"
 }

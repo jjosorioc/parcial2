@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import { FormattedMessage } from 'react-intl';
 
 const backUrl = "http://localhost:3000/books";
 
@@ -71,13 +72,13 @@ function Home() {
                                 <Card.Title>{selectedBook.name}</Card.Title>
                                 <Card.Text>
                                     <strong>ISBN:</strong> {selectedBook.isbn}<br />
-                                    <strong>Author:</strong> {selectedBook.author}<br />
-                                    <strong>Publisher:</strong> {selectedBook.publisher}<br />
-                                    <strong>Genre:</strong> {selectedBook.gender}<br />
-                                    <strong>Year:</strong> {selectedBook.year}<br />
-                                    <strong>Available Online:</strong> {selectedBook.available_online ? 'Yes' : 'No'}<br />
-                                    <strong>Price:</strong> ${selectedBook.price}<br />
-                                    <strong>Summary:</strong> {selectedBook.summary}
+                                    <strong><FormattedMessage id="Author" />:</strong> {selectedBook.author}<br />
+                                    <strong><FormattedMessage id="Publisher" />:</strong> {selectedBook.publisher}<br />
+                                    <strong><FormattedMessage id="Genre" />:</strong> {selectedBook.gender}<br />
+                                    <strong><FormattedMessage id="Year" />:</strong> {selectedBook.year}<br />
+                                    <strong><FormattedMessage id="Available Online" />:</strong> {selectedBook.available_online ? 'Yes' : 'No'}<br />
+                                    <strong><FormattedMessage id="Price" />:</strong> ${selectedBook.price}<br />
+                                    <strong><FormattedMessage id="Summary" />:</strong> {selectedBook.summary}
                                 </Card.Text>
                             </Card.Body>
                         </Card>
